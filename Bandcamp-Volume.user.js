@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Bandcamp Volume
-// @version      1.0
+// @version      1.0.1
 // @description  A simple userscript which adds a simple volume slider on bandcamp.
 // @author       rogeraabbccdd
 // @match        https://*.bandcamp.com/album/*
@@ -29,13 +29,13 @@ const volumeHTML = `
         margin:1px 0.83333333333333em;
         vertical-align: middle;
       }
-      .vol-slider {
+      #vol-slider {
         width: 200px;
         vertical-align: middle;
       }
     </style>
     <svg style="" class="vol-icon" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#material-vol-up"></use></svg>
-    <input type="range" min="0" max="1" class="vol-slider" value="100" step="0.01" style="">
+    <input type="range" min="0" max="1" id="vol-slider" value="100" step="0.01" style="">
   </td>`
 
 const playerTable = document.querySelector('.inline_player table tbody')
